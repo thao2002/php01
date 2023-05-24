@@ -34,4 +34,27 @@
   echo str_pad($s, 50, "_", STR_PAD_BOTH) ."\n";//b14
   echo strrchr($s,"hoc")."\n";
   echo strstr($s,"hoc")."\n";
+  $res = true;
+  for($i = 0;$i<strlen($s);$i++){
+    if(!($s[$i] > '0' && $s[$i] < '9')) {
+        $res = false;
+        break;
+    }
+  }
+  if($res){
+    echo "la so\n";
+  }else echo "k phai so\n";
+  $res = false;
+  $res2 = false;
+  for($i = 0;$i<strlen($s);$i++){
+    if($res){
+        if($s[$i] == '.'){
+            $res2 = true;
+            break;
+        }
+    }else $res = $s[$i] == '@';
+  }
+  if($res && $res2){
+    echo "la email\n";
+  }else echo "k phai la email\n";
 ?>
