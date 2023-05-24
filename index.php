@@ -1,5 +1,5 @@
 <?php
-   $s = "truong dai hoc Quoc gia ha noi";
+   $s = "truong dai hoc Thuong mai";
   echo strlen($s); // b1
   echo "\n";
   echo str_word_count($s); //b2
